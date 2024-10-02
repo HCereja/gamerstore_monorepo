@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Currency, Product } from "@/core";
+import { Currency, Product } from "@gstore/core";
 import { IconShoppingCartPlus } from "@tabler/icons-react";
 import ReviewRating from "../shared/ReviewRating";
 

@@ -2,7 +2,7 @@ import BuyingBanner from "@/components/product/BuyingBanner";
 import ProductInfo from "@/components/product/ProductInfo";
 import ProductNotFound from "@/components/product/ProductNotFound";
 import ProductTitle from "@/components/product/ProductTitle";
-import { products } from "@/core";
+import { products } from "@gstore/core";
 
 const ProductPage = (props: any) => {
   const id = +props.params.id;

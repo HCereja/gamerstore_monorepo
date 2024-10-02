@@ -1,5 +1,5 @@
 import { IconTag } from "@tabler/icons-react";
-import { Product } from "@/core";
+import { Product } from "@gstore/core";
 import Tag from "../shared/Tag";
 
 export interface SpecsProps {

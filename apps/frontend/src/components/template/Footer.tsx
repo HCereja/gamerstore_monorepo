@@ -6,7 +6,6 @@ import {
   IconBrandYoutube,
 } from "@tabler/icons-react";
 import Logo from "../shared/Logo";
-import Link from "next/link";
 
 const Footer = () => {
   return (

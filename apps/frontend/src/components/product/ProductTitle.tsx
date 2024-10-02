@@ -1,4 +1,4 @@
-import { Product } from "@/core";
+import { Product } from "@gstore/core";
 
 export interface ProductTitleProps {
   product: Product;

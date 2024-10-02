@@ -1,5 +1,5 @@
 "use client";
-import { products } from "@/core";
+import { products } from "@gstore/core";
 // import useProdutos from '@/data/hooks/useProdutos'
 import ProductItem from "./ProductItem";
 import ProductNotFound from "./ProductNotFound";

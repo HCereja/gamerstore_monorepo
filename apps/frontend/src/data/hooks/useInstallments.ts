@@ -1,4 +1,4 @@
-import { CalculateInstallment } from "@/core";
+import { CalculateInstallment } from "@gstore/core";
 
 const useInstallment = (value: number, quantity: number = 12) => {
   const installment = new CalculateInstallment().execute(value, quantity);
