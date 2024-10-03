@@ -23,4 +23,12 @@ model Product {
   rating      String
   videoReview String
   tags        String[]
+
+  basePrice        Float
+  promotionalPrice Float
+  lowestPrice      Float
+  biggestPrice     Float
+  avgPrice         Float
+
+  specs Json
 }
