@@ -20,7 +20,7 @@ model Product {
   brand       String
   model       String
   image       String
-  rating      String
+  rating      Float
   videoReview String
   tags        String[]
 
