@@ -31,4 +31,45 @@ model Product {
   avgPrice         Float
 
   specs Json
+  items OrderItem[]
+
+  @@map("products")
+}
+
+model Order {
+  id          Int      @id @default(autoincrement())
+  date        DateTime
+  fullValue   Float
+  status      String
+  paymentType String
+
+  delivery   OrderDelivery @relation(fields: [deliveryId], references: [id])
+  deliveryId Int           @unique
+
+  items OrderItem[]
+}
+
+model OrderItem {
+  id         Int   @id @default(autoincrement())
+  quantity   Int
+  unityPrice Float
+
+  order   Order @relation(fields: [orderId], references: [id])
+  orderId Int
+
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+}
+
+model OrderDelivery {
+  id         Int    @id @default(autoincrement())
+  name       String
+  email      String
+  cpf        String
+  address    String
+  complement String
+  city       String
+  state      String
+
+  order Order?
 }
