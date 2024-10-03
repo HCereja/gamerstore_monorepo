@@ -7,7 +7,7 @@ export default interface Order {
   id: number;
   date: Date;
   items: OrderItem[];
-  totalValue: number;
+  fullValue: number;
   status: Status;
   paymentType: PaymentType;
   delivery: OrderDelivery;
