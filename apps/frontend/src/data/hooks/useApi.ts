@@ -3,7 +3,7 @@ import { useCallback } from "react";
 const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
 const useApi = () => {
-  const httpGet = useCallback(async function (path: string) {
+  const httpGet = useCallback(async (path: string) => {
     const uri = path.startsWith("/") ? path : `/${path}`;
     const completeUrl = `${baseURL}${uri}`;
 
@@ -11,7 +11,7 @@ const useApi = () => {
     return extractData(res);
   }, []);
 
-  const httpPost = useCallback(async function (path: string, body: any) {
+  const httpPost = useCallback(async (path: string, body: any) => {
     const uri = path.startsWith("/") ? path : `/${path}`;
     const completeUrl = `${baseURL}${uri}`;
 
@@ -25,7 +25,7 @@ const useApi = () => {
     return extractData(res);
   }, []);
 
-  async function extractData(res: Response) {
+  const extractData = async (res: Response) => {
     let content = "";
     try {
       content = await res.text();
@@ -34,7 +34,7 @@ const useApi = () => {
       console.error(e);
       return content;
     }
-  }
+  };
 
   return { httpGet, httpPost };
 };
