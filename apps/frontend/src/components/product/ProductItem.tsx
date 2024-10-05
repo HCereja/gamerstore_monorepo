@@ -5,12 +5,14 @@ import Image from "next/image";
 import { Currency, Product } from "@gstore/core";
 import { IconShoppingCartPlus } from "@tabler/icons-react";
 import ReviewRating from "../shared/ReviewRating";
+import useCart from "@/data/hooks/useCart";
 
 export interface ProductItemProps {
   product: Product;
 }
 
 const ProductItem = ({ product }: ProductItemProps) => {
+  const { addItem } = useCart();
   return (
     <Link
       href={`/produto/${product.id}`}
@@ -58,8 +60,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
                     "
           onClick={(e) => {
             e.preventDefault();
-            console.log("Adicionar ao carrinho");
-            // adicionarItem(props.produto)
+            addItem(product);
           }}
         >
           <IconShoppingCartPlus size={20} />
