@@ -4,7 +4,7 @@ import { IconCreditCard, IconShoppingCart } from "@tabler/icons-react";
 import { Currency, Product } from "@gstore/core";
 import useCart from "@/data/hooks/useCart";
 import { useRouter } from "next/navigation";
-import useInstallment from "@/data/hooks/useInstallments";
+import useInstallment from "@/data/hooks/useInstallment";
 
 export interface BuyingBannerProps {
   product: Product;
